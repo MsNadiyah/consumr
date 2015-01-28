@@ -1,12 +1,15 @@
 $(function (){
 	$.getJSON('http://www.reddit.com/r/aww.json', gotJSON);
+	$('#logo').click(function(){
+		$(this).fadeOut("slow").fadeIn("slow");
+	});
 });
 
 var response1;
 function gotJSON(response, status, jqXHR){
 	response1 = response
 	console.log(response);
-	console.log(jqXHR)
+	console.log(jqXHR);
 	dataArray = response.data.children
 
 	for(var i = 0; i < dataArray.length; i++) {
