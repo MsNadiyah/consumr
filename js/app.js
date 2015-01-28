@@ -11,12 +11,27 @@ function gotJSON(response, status, jqXHR){
 
 	for(var i = 0; i < dataArray.length; i++) {
 		var thumb = dataArray[i].data.thumbnail;
+		if (thumb) {
+			var thumbElement = '<div class="col-xs-2 pics">';
+			thumbElement += '<img class="img-responsive" src="' + thumb + '">';
+			thumbElement += '</div>'; 
 
-		var thumbElement = '<div class="col-xs-2 pics">';
-		thumbElement += '<img class="img-responsive" src="' + thumb + '">';
-		thumbElement += '</div>'; 
+			$('#main-container div.row').append(thumbElement);
+			var current_div = $('#main-container div.row').find('div:last-child');
+			current_div.hover(function(){
+				$(this).animate({
+					bottom: "20px"
+				})
+			});
 
-		$('#main-container div.row').append(thumbElement);
+			current_div.mouseleave(function(){
+				$(this).animate({
+					bottom: "0px"
+				});
+			});
+
+		}
+
 
 	}
 
