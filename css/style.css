@@ -1,0 +1,33 @@
+body {
+  background-image: url('images/mosaic-tile.png');
+}
+
+.logo-box {
+  background-color: #7B556E;
+  height: 110px;
+  width: 1400px;
+}
+
+#logo {
+  margin-top: -20px;
+  padding-left: 10px;
+}
+
+#stripe {
+  background-color: #F6F9F2;
+  height: 5px;
+}
+
+#content {
+  height: 580px;
+}
+
+footer {
+  background-color: #7B556E;
+  height: 40px;
+}
+
+p {
+  text-align: center;
+  color: #C6D8C2;
+}
